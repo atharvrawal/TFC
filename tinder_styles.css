@@ -1,4 +1,27 @@
 /* styles.css */
+
+:root{
+    --purple:#6a0dad;
+}
+
+
+/* we are able to add the things universally to all the webpage attributes */
+*{
+    margin:0; 
+    padding:1rem;
+    box-sizing: border-box;
+    /* when we use the border box tells the browser to account for any border or padding*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* adding a universal font to the given webpage */
+    outline:none;
+    border: none;
+    text-decoration: none ;
+    text-transform: capitalize   ; /* to tell when to capitalize an element in web page*/
+    transition: .2s linear;
+    /*creates an image consisting of a progressive transition between two or more colors along a straight line*/
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -10,10 +33,19 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: #ff4e50;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 15px 0;
+}
+.navbar a {
+    color: var(--purple);
+    text-decoration: none ;
+    /* removing the underline from all the links */ 
+}
+
+.navbar a:hover{
+    text-decoration: underline ;
 }
 
 .profile-card {
