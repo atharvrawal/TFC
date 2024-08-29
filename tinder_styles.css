@@ -1,84 +1,121 @@
-/* styles.css */
-
-:root{
-    --purple:#6a0dad;
+:root {
+    --purple: #6a0dad;
 }
 
 
 /* we are able to add the things universally to all the webpage attributes */
-*{
-    margin:0; 
-    padding:1rem;
+* {
+    margin: 0;
+    padding: 1rem;
     box-sizing: border-box;
     /* when we use the border box tells the browser to account for any border or padding*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* adding a universal font to the given webpage */
-    outline:none;
+    outline: none;
     border: none;
-    text-decoration: none ;
-    text-transform: capitalize   ; /* to tell when to capitalize an element in web page*/
+    text-decoration: none;
+    text-transform: capitalize; /* to tell when to capitalize an element in web page*/
     transition: .2s linear;
-    /*creates an image consisting of a progressive transition between two or more colors along a straight line*/
+    /*creates an image consisting of a progressive transition between two or more colors along a straight line.*/
+}
+
+html {
+    font-size: 96.6%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    /*overflow-x: hidden;
+     checks to end the webpoage there or make a scroll bar to make sure the webage goes more down */
 }
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+
+.heading span{
+    color: var(--purple);
+}
+
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem 5%;
+    display: flex; /* allows us to manupilate with the alignment */
     align-items: center;
-}
-
-.navbar {
-    width: 100%;
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+    /* justifies the amount of space the browser can leave between the elements, either btw or around items */
+    justify-content: space-between;
+    z-index:1000; /* cotrols the stacking order or the overlapping elements of the page */
+    box-shadow: 0 .5rem 4rem rgba(0,0,0,.1);
 }
 .navbar a {
     color: var(--purple);
-    text-decoration: none ;
-    /* removing the underline from all the links */ 
+    text-decoration: none;
+    /* removing the underline from all the links */
 }
 
-.navbar a:hover{
-    text-decoration: underline ;
+.navbar a:hover {
+    text-decoration: underline;
 }
 
-.profile-card {
-    background-color: white;
-    width: 300px;
-    padding: 20px;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
 
-.profile-card img {
-    width: 100%;
-    border-radius: 10px;
-}
 
-.buttons {
-    margin-top: 20px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns: left, center, right */
+    grid-template-rows: 1fr, 2fr, 3fr; /* rows will adjust based on content */
+    gap: 20px; /* space between the items */
+    height: 100vh; /* full viewport height */
+    align-items: center; /* vertically centers the content */
+  }
+  
+  .review-left, .review-right {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .review-left {
+    grid-row: 1 / 3; /* spans two rows */
+    grid-column: 1 / 2; /* first column */
+  }
+  
+  .review-right {
+    grid-row: 1 / 3; /* spans two rows */
+    grid-column: 3 / 4; /* third column */
+  }
+  
+  .main-box {
+    grid-column: 2 / 3; /* center column */
     display: flex;
-    justify-content: space-between;
-    width: 300px;
-}
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: lightgray; /* placeholder background */
+    padding: 20px;
+    text-align: center;
+  }
 
-button {
-    background-color: #ff4e50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+  .main-box img {
+    max-width: 100%; /* Ensures the image doesn't exceed the width of the parent */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10%; /* Optional: to make the image circular */
+    width: 150px; /* Adjust to your desired size */
+  }
+  
+  .review {
+    background-color: #f0f0f0; /* placeholder background for reviews */
+    padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e84347;
-}
+    text-align: center;
+    grid-column: 2 / 3; /* center column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: lightgray; /* placeholder background */
+    padding: 20px;
+    text-align: center;
+  }
+  

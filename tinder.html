@@ -7,24 +7,40 @@
     <link rel="stylesheet" href="tinder_styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <div class="navbar">
-        <a href = "#home">home</a>
-        <a href = "about">about</a>
-        <a href = "contact">contact</a>
-        <a href = "counselling">counselling</a>
-        <a href = "subscriptions">subscription</a>
-    </div>
-    
-    <div class="profile-card">
-        <img src="Counselor.jpg" alt="Counselor Photo">
-        <h2>John Doe</h2>
-        <p>Expert in technology and engineering career paths.</p>
-    </div>
+    <header>
+        <div>
+            <a href="#" class="logo">TFC<span>.</span></a>
+        </div>
 
-    <div class="buttons">
-        <button class="dislike">Dislike</button>
-        <button class="like">Like</button>
-    </div>
+
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+            <a href="counselling">counselling</a>
+            <a href="Profile">Profile</a>
+        </nav>
+
+    </header>
+
+
+    <div class="grid-container">
+        <div class="review-left">
+          <div class="review"><img src = "review.png"></div>
+          <div class="review"><img src = "review.png"></div>
+        </div>
+        <div class="main-box">
+            <img src="Counselor.jpg">
+            <h2 class = "Counselor_Name">John Doe</h2>
+            <p>Expert in technology and engineering career paths.</p>
+        </div>
+        <div class="review-right">
+          <div class="review"><img src = "review.png"></div>
+          <div class="review"><img src = "review.png"></div>
+        </div>
+      </div>
+      
 
     <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
