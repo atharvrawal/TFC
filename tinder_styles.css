@@ -186,6 +186,11 @@ div.container{
 
 }
 
+.chat_text{
+  grid-area: 6/4/6/5;
+  transform: translate(-5px,50px);
+}
+
 
 
 

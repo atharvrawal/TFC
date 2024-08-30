@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Profile </title>
+	<style>
+		/* Basic styling for the page */
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-image: url("Background_counselor.jpg"); /* Replace with your image path */
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.container {
+			width: 80%;
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+			border: 1px solid #dddddd;
+			box-shadow: 0 0 10px rgba(172, 118, 191, 0.523);
+			border-radius: 8px;
+		}
+
+		.label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #333;
+		}
+
+		.input-field {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ac5858;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		textarea.input-field {
+			height: 100px; /* Adjust height for textarea */
+		}
+
+		button {
+			background-color: #53467c;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		button:hover {
+			background-color: #6a5ea2;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Student Profile </h2>
+		<form>
+			<div class="label">Name:</div>
+			<input type="text" class="input-field" id="name" name="name">
+			
+			<div class="label">Education:</div>
+			<input type="text" class="input-field" id="education" name="education">
+			
+			<div class="label">Degrees:</div>
+			<input type="text" class="input-field" id="degrees" name="degrees">
+			
+			
+			
+			<div class="label">Location:</div>
+			<input type="text" class="input-field" id="location" name="location">
+			
+			<div class="label">Phone Number:</div>
+			<input type="tel" class="input-field" id="phone" name="phone">
+			
+			<div class="label">Email:</div>
+			<input type="email" class="input-field" id="email" name="email">
+			
+			<button type="submit">Save</button>
+        
+        </br>
+		</form>
+	</div>
+</body>
+</html>
