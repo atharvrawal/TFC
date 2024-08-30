@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-end; /* Center the chat container horizontally */
+    align-items: flex-end;    /* Center the chat container vertically */
     height: 100vh;
     margin: 0;
     background-color: #252323;
@@ -11,25 +11,30 @@ body {
 .chat-container {
     width: 75%;
     height: 91%;
-    background-color:#FFD7C4;
-    border-radius:2px;
+    background-color: #FFD7C4;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background-image: url(back.jpg);
-    background-size:cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
+
 .dm-list {
     width: 25%;
-    height:91%; 
+    height: 91%; /* Ensure the DM list takes the full height */
     background-color: hwb(0 100% 0%);
     border-right: 1px solid #9DBDFF;
     padding: 10px;
     overflow-y: auto;
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
+
 .Message-Noti {
     position: absolute;
-    top: 0%;
-    right: 0%; 
+    top: 0;
+    right: 0;
     width: 74%;
     height: 98px;
     background-color: #fffdbe;
@@ -39,8 +44,8 @@ body {
     color: black;
     font-weight: bold;
     display: flex;
-    justify-content:left;
-    align-items: right;
+    justify-content: left;
+    align-items: center;
 }
 
 .dm-list ul {
@@ -58,18 +63,20 @@ body {
     background-color: #FFD704;
 }
 
-
 .chat-box {
-    padding: 11px;
-    height: 88%;
+    flex-grow: 1;
+    padding: 10px;
     overflow-y: auto;
     border-bottom: 1px solid #ebd871;
+    display: flex;
+    flex-direction: column; /* Ensure messages are stacked vertically */
 }
 
 .input-box {
     display: flex;
     padding: 10px;
     background-color: #fffdbe;
+    border-top: 1px solid #ebd871; /* Add border to separate input box from chat */
 }
 
 #chat-input {
@@ -78,6 +85,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 #send-btn {
@@ -92,43 +100,22 @@ body {
 #send-btn:hover {
     background-color: #0056b3;
 }
+
 .chat-message {
-    background-color: #dcf8c6;
-    padding: 10px 15px;
+    background-color: #dcf8c6; /* Light green color for received messages */
+    padding: 10px;
     border-radius: 20px;
     margin: 5px 0;
-    max-width: 80%;
-    word-wrap: break-word;
-    align-self: flex-start;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    position: relative;
+    max-width: 80%; /* Limits the width of the message bubble */
+    word-break: break-word; /* Ensures long words break and wrap */
+    display: inline-block; /* Allows bubble to adjust width based on content */
+    align-self: flex-start; /* Aligns messages to the left by default */
 }
 
-.chat-message::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-right-color: #dcf8c6;
-    border-left: 0;
-    border-bottom: 0;
-    margin-top: -5px;
-    margin-left: -10px;
-}
-
-.chat-message.user-message {
-    background-color: #ffffff;
-    align-self: flex-end;
-}
-
-.chat-message.user-message::after {
-    left: auto;
-    right: -1px;
-    border-right-color: transparent;
-    border-left-color: #ffffff;
+.chat-message.sent {
+    background-color: #34b7f1; /* Light blue color for sent messages */
+    align-self: flex-end; /* Aligns sent messages to the right */
+    color: white; /* Makes the text color white for sent messages */
 }
 :root {
     --purple: #6a0dad;
@@ -194,15 +181,16 @@ header {
     padding: 1rem 5%;
     display: flex;
     align-items: center;
+    /* justifies the amount of space the browser can leave between the elements, either btw or around items */
     justify-content: space-between;
-    z-index:1000;
+    z-index:1000; /* cotrols the stacking order or the overlapping elements of the page */
     box-shadow: 0 .5rem 4rem rgba(0,0,0,.1);
 }
 
 .navbar a {
     color: var(--purple);
     text-decoration: none;
-
+    /* removing the underline from all the links */
 }
 
     .navbar a:hover {
