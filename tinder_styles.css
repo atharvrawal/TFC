@@ -92,13 +92,13 @@ div.container{
 
 .item1{
   grid-area: 1/1/1/1;
-  background-color: white;
+  background-color: gray;
 }
 
 
 .counsellor_image{
   grid-area: 1/2/4/4;
-  background-color: white;
+  /* background-color: gray; */
   padding: 0px;
 }
 .counsellor_image>img{
@@ -110,23 +110,26 @@ div.container{
   border-radius: 15%;
 }
 
-.counsellor_name{
-  background-color: green;
+.counsellor_name {
+  /* background-color: green;  */
   grid-area: 3/2/4/4;
-  justify-content: center;
-  
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.5em;
+  transform: translateY(-30px);
 }
 
 .item2{
   grid-area: 1/14/1/14;
-  background-color: white;
+  background-color: gray;
 
 }
 .item3{
   grid-area: 6/1/6/1;
-  background-color: white;
+  background-color: gray;
 }
 .item4{
   grid-area: 6/14/6/14;
-  background-color: white;
+  background-color: gray;
 } 
