@@ -78,14 +78,17 @@ header .logo {
 div.container{
   margin: 100px;
   margin-bottom: 0px;
-  margin-top: 125px;
+  margin-top: 110px;
   padding :50px;
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px 100px ;
   background-color: #FAF9F6;
-  gap :10px;
+  grid-gap :5px;
   box-sizing: border-box;
+  border: 40px solid black;
+  border-radius: 30px; 
+  position: relative; 
 }
 
 /* 6x14 grid*/
@@ -100,6 +103,7 @@ div.container{
   grid-area: 1/2/4/4;
   /* background-color: gray; */
   padding: 0px;
+  z-index: 1;
 }
 .counsellor_image>img{
   object-fit: cover;
@@ -112,12 +116,27 @@ div.container{
 
 .counsellor_name {
   /* background-color: green;  */
-  grid-area: 3/2/4/4;
+  grid-area: 3/2/4/6;
   justify-self: center;
   align-self: center;
-  text-align: center;
+  text-align: left;
   font-size: 1.5em;
-  transform: translateY(-30px);
+  z-index: 1;
+}
+
+.counsellor_about{
+  grid-area: 3/2/5/6;
+  background-color: gray;
+  text-align: left;
+  z-index: 1;
+  transform: translateY(60px);
+
+}
+
+.background{
+  grid-area: 1/2/7/6;
+  border-radius: 30px;
+  background-color: rgb(185, 187, 185);
 }
 
 .item2{
@@ -133,3 +152,18 @@ div.container{
   grid-area: 6/14/6/14;
   background-color: gray;
 } 
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
+  grid-gap: 10px; /* Space between grid items */
+  border: 5px solid black; /* Creates a black border outside the grid */
+  padding: 10px; /* Adds space between the border and the grid items */
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
