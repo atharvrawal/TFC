@@ -83,7 +83,7 @@ div.container{
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px 100px ;
-  background-color: blue;
+  background-color: #FAF9F6;
   gap :10px;
   box-sizing: border-box;
 }
