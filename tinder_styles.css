@@ -69,10 +69,10 @@ header {
     text-decoration: underline;
 }
 
-header .logo {
-  color: var(--purple);
-  font-size: 2rem;
-  font-weight: bold;
+.logo img {
+  height : 40px;
+  padding : 0;
+  margin: 0;
 }
 
 div.container{
@@ -83,24 +83,17 @@ div.container{
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px 100px ;
-  background-color: #FAF9F6;
+  background-color: #dfdedb;
   grid-gap :5px;
   box-sizing: border-box;
-  border: 40px solid black;
   border-radius: 30px; 
   position: relative; 
 }
 
-/* 6x14 grid*/
-
-.item1{
-  grid-area: 1/1/1/1;
-  background-color: gray;
-}
-
+/* 6x15  grid*/
 
 .counsellor_image{
-  grid-area: 1/2/4/4;
+  grid-area: 1/1/2/3;
   /* background-color: gray; */
   padding: 0px;
   z-index: 1;
@@ -116,54 +109,88 @@ div.container{
 
 .counsellor_name {
   /* background-color: green;  */
-  grid-area: 3/2/4/6;
-  justify-self: center;
-  align-self: center;
+  padding-left: 0px;
+  grid-area: 3/1/4/5;
+  justify-self: left;
+  align-self: left;
   text-align: left;
   font-size: 1.5em;
+  transform: translateY(-45px);
   z-index: 1;
+}
+
+.counsellor_title{
+  grid-area : 3/1/5/5;
+  z-index: 2;
+  padding-left: 0px;
+  transform: translateY(-5px);
 }
 
 .counsellor_about{
-  grid-area: 3/2/5/6;
-  background-color: gray;
+  grid-area: 3/1/5/5;
   text-align: left;
   z-index: 1;
-  transform: translateY(60px);
+  transform: translateY(70px);
 
 }
 
+.experience_icon{
+  grid-area: 1/3/2/5;
+  transform : translateX(-30px);
+}
+
+.experience_text{
+  grid-area: 1/3/2/5;
+  transform : translateY(-100px);
+  transform : translateX(0px);
+}
+
+.time_icon{
+  grid-area: 1/3/2/5; 
+  transform: translate(-30px,50px);
+}
+
+.time_text{
+  grid-area: 1/3/2/5;
+  transform : translateY(50px);
+}
+
+.completed_icon{
+  grid-area: 1/3/2/5; 
+  transform: translate(-30px,120px);  
+}
+
+.completed_text{
+  grid-area: 1/3/2/5;
+  transform : translateY(120px);
+}
 .background{
-  grid-area: 1/2/7/6;
+  grid-area: 1/1/7/5;
   border-radius: 30px;
-  background-color: rgb(185, 187, 185);
+  background-color : rgb(179, 179, 179);
 }
 
-.item2{
-  grid-area: 1/14/1/14;
-  background-color: gray;
-
-}
-.item3{
-  grid-area: 6/1/6/1;
-  background-color: gray;
-}
-.item4{
-  grid-area: 6/14/6/14;
-  background-color: gray;
-} 
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
-  grid-gap: 10px; /* Space between grid items */
-  border: 5px solid black; /* Creates a black border outside the grid */
-  padding: 10px; /* Adds space between the border and the grid items */
+.chat_icon{
+  grid-area: 6/4/6/4;
+  transform: translate(-10px,10px);
 }
 
-.grid-item {
-  background-color: lightblue;
-  padding: 20px;
-  text-align: center;
+.star{
+  grid-area:6/1/6/5;
+  transform: translate(-15px,-10px); 
 }
+
+.see_reviews{
+  grid-area : 6/1/7/5;
+  transform: translate(-13px,0px);
+
+}
+
+
+
+
+/* .background2{
+  grid-area: 1/5/7/9; 
+  border-radius: 30px;
+  background-color : rgb(97, 4, 4);
+} */

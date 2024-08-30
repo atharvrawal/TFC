@@ -9,15 +9,15 @@
       padding: 0;
       background-color: #568eac9c;
       background-image: url("background_signup.jpg"); /* Replace with your actual image path */
-      background-size: cover; /* Adjust as needed (cover, contain, etc.) */
+      background-size: cover;
       background-repeat: no-repeat;
-      background-position: center; /* Adjust as needed (center, top, bottom, etc.) */
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-family: sans-serif;
     }
+
     body::before {
       content: "";
       position: absolute;
@@ -28,7 +28,7 @@
       background-color: rgba(0, 0, 0, 0.232); /* Change the color and opacity as needed */
       z-index: -1; /* Keeps the overlay behind the content */
     }
-    
+
     .container {
       width: 500px;
       margin: 50px auto;
@@ -36,17 +36,8 @@
       padding: 30px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      position: relative; /* Keep content on top of the overlay */
+      position: relative;
       z-index: 1;
-    }
-
-    .container {
-      width: 500px;
-      margin: 50px auto;
-      background-color: #ffffff60;
-      padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
@@ -61,7 +52,6 @@
     }
 
     input[type="text"],
-    input[type="text"],
     input[type="password"] {
       width: 100%;
       padding: 10px;
@@ -69,6 +59,15 @@
       border: 1px solid #ccc;
       border-radius: 3px;
       box-sizing: border-box;
+    }
+
+    .role-selection {
+      margin-bottom: 15px;
+    }
+
+    .role-selection label {
+      font-weight: normal;
+      margin-right: 10px;
     }
 
     button {
@@ -90,9 +89,8 @@
       text-align: center;
       margin-top: 10px;
       font-size: 14px;
-      color: #000000; /* Change this to a darker color */
+      color: #000000;
     }
-    
 
     .small-text a {
       color: #007bff;
@@ -103,12 +101,28 @@
       text-decoration: underline;
     }
   </style>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      // Check if the "Counselor" checkbox is checked
+      const isCounselor = document.getElementById('counselor').checked;
+
+      if (isCounselor) {
+        // Redirect to the counselor profile page
+        window.location.href = 'Counselor_info_page.html';
+      } else {
+        // Proceed with form submission or redirect to another page
+        alert("Form submitted as a Student");
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <h1>Get started with TFC</h1>
-    <form>
-      <label for="email">Username:</label>
+    <form onsubmit="handleFormSubmit(event)">
+      <label for="username">Username:</label>
       <input type="text" id="username" name="username" placeholder="xxxxx" required>
 
       <label for="firstName">First Name:</label>
@@ -119,6 +133,15 @@
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="Password" required>
+
+      <div class="role-selection">
+        <label>
+          <input type="checkbox" id="student" name="role" value="student"> Student
+        </label>
+        <label>
+          <input type="checkbox" id="counselor" name="role" value="counselor"> Counselor
+        </label>
+      </div>
 
       <button type="submit">Swipe right towards your dream career!!</button>
     </form>
